@@ -25,6 +25,82 @@ h3 {
     padding-top: 30px;
 }
 
+.sosmed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.bundar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'montserrat';
+    font-size: 37px;
+    font-weight: 600;
+    color: #fff;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.ig {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    transition: .3s;
+}
+
+.fb {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    transition: .3s;
+}
+
+.x {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    transition: .3s;
+}
+
+.yt {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    transition: .3s;
+}
+
+.ig:hover {
+    background: linear-gradient(150deg, #4F5BD5 9.89%, rgba(79, 91, 213, 0.00) 56.54%), linear-gradient(213deg, #DA1B82 32.64%, #FEBF48 90.25%);
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 9px rgba(255, 255, 255, 0.20));
+}
+
+.fb:hover {
+    background: #1877F2;
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 9px rgba(255, 255, 255, 0.20));
+}
+
+.x:hover {
+    background: #0f0f0f;
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 9px rgba(255, 255, 255, 0.20));
+}
+
+.yt:hover {
+    background: #F00;
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 9px rgba(255, 255, 255, 0.20));
+}
+
+#xtwt {
+    height: 30px;
+    fill: #FFF;
+}
 /* ========================================HEADER================================================================ */
 
 html {
@@ -138,3 +214,4 @@ footer {
         padding: 0;
     }
 }
+
