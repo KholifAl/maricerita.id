@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/style_ke2.css">
+    <link rel="stylesheet" href="assets/swiper.css">
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
@@ -119,11 +120,10 @@
 
     <section id="kata" class="vh Kata">
         <h1>1 Kata Untuk Hari ini</h1>
-        <div class="slider-container">
+        <!-- <div class="slider-container">
             <div class="slider">
                 <div class="card">
                     <img src="assets/img/gambar1.png" alt="gambar">
-                    <!-- Content for the first card -->
                 </div>
                 <div class="card">
                     <img src="assets/img/gambar1.png" alt="gambar">
@@ -133,11 +133,26 @@
                     <img src="assets/img/gambar1.png" alt="gambar">
 
                 </div>
-                <!-- Add more cards as needed -->
             </div>
             <button class="arrow-left"></button>
             <button class="arrow-right"></button>
+        </div> -->
+        <div class="swiper-container">
+            <div class="mySwiper" effect="cards" grab-cursor="true">
+                <div class="swiper-slide">Slide1</div>
+                <div class="swiper-slide">Slide2</div>
+                <!-- <swiper-slide>Slide 1</swiper-slide>
+                <swiper-slide>Slide 2</swiper-slide> -->
+                <!-- <swiper-slide>Slide 3</swiper-slide>
+                <swiper-slide>Slide 4</swiper-slide>
+                <swiper-slide>Slide 5</swiper-slide>
+                <swiper-slide>Slide 6</swiper-slide>
+                <swiper-slide>Slide 7</swiper-slide>
+                <swiper-slide>Slide 8</swiper-slide>
+                <swiper-slide>Slide 9</swiper-slide> -->
+                </div>
         </div>
+
     </section>
 
     <section id="kami" class="vh Kita">
@@ -163,6 +178,8 @@
         <p>Belajar Dasar Pemrograman Web &#169; 2019, Tugas UTS PDW</p>
     </footer>
 
-    <script src="assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- <script src="assets/script.js"></script>
+    <script src="assets/swiper.js"></script> -->
 </body>
 </html>
