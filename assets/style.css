@@ -9,14 +9,17 @@
 h2 {
     color: #00a2c6;
 }
+
 h3 {
     color: #00a2c6;
 }
 
 :root {
-    --warna1: #eef6ff; /* Replace with your primary color value */
-    --warna2: #9db8f6; /* Replace with your secondary color value */
-  }
+    --warna1: #eef6ff;
+    /* Replace with your primary color value */
+    --warna2: #9db8f6;
+    /* Replace with your secondary color value */
+}
 
 .vh {
     height: 100vh;
@@ -101,17 +104,19 @@ h3 {
     height: 30px;
     fill: #FFF;
 }
+
 /* ========================================HEADER================================================================ */
 
 html {
     scroll-behavior: smooth;
-} 
+}
 
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     background-color: #08031c;
 }
+
 main {
     padding: 0px;
     overflow: auto;
@@ -126,30 +131,36 @@ main {
 
 .navigation {
     display: flex;
+    z-index: ;
 }
+
 nav a {
     font-size: 18px;
     font-weight: 400px;
     text-decoration: none;
     color: white;
-    
+
 }
+
 nav a:hover {
     font-weight: bold;
 }
-nav li{
+
+nav li {
     /* display: inline; */
     list-style-type: none;
     margin-right: 20px;
 
 }
+
 nav {
     display: flex;
     justify-content: space-between;
     position: sticky;
- 
+
     background-color: red;
-    z-index: 100; /* Add a z-index to ensure the navigation is on top */
+    z-index: 100;
+    /* Add a z-index to ensure the navigation is on top */
 
     padding: 5px;
     gap: 20px;
@@ -159,8 +170,10 @@ nav {
     display: inline-block;
     position: relative;
     padding: 10px 20px;
-    background-color: #ff6600; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #ff6600;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
     text-decoration: none;
     border-radius: 5px;
 }
@@ -168,9 +181,11 @@ nav {
 
 
 header {
- position: fixed;
- width: 100%;
+    position: fixed;
+    width: 100%;
+    height: 150px;
 }
+
 footer {
     padding: 20px;
     color: white;
@@ -185,23 +200,26 @@ footer {
 #home {
     background-color: var(--warna1);
 }
+
 .container {
     display: flex;
     justify-content: space-between;
     height: 100%;
     align-items: center;
 }
+
 .kepala {
     font-size: 20px;
     padding: 60px;
     background-image: url(../image/hutan.jpg);
     text-align: left;
     color: rgb(22, 22, 22);
-    
+
 }
+
 .gambar img {
     width: auto;
-    height: 400px;
+    height: 50px;
     margin-right: 200px;
 }
 
@@ -218,9 +236,10 @@ footer {
 }
 
 @media screen and (max-width:1000px) {
-    #content, aside{
+
+    #content,
+    aside {
         width: 100%;
         padding: 0;
     }
 }
-
