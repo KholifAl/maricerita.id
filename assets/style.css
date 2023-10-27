@@ -124,6 +124,7 @@ main {
 
 .logo {
     display: flex;
+    height: 50px;
     position: relative;
     color: var(--warna1);
 
@@ -218,7 +219,7 @@ footer {
 
 .gambar img {
     width: auto;
-    height: 50px;
+    height: 500px;
 }
 
 /* ==================================================CONTACT========================================================================= */
