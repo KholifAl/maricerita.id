@@ -17,46 +17,51 @@
     margin: 30px 40px;
     /* margin: 40px 60px ; */
     padding: 0 50px;
-    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
     border-radius: 5px;
     background-color: rgb(217, 72, 101);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
- 
-.post {
-    margin: 10px 0 ;
+  }
+  
+  .post {
+    margin: 10px 0;
     max-height: 100%;
     overflow-y: auto;
     border-radius: 5px;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
- 
-.post-header {
+  }
+  
+  .post-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-}
-.post-header img {
+  }
+  
+  .post-header img {
     height: 70px;
-} 
- 
-.post-content {
+  }
+  
+  .post-content {
     padding: 10px;
-}
+  }
 
 /* ==================================================KAMI QUOTES========================================================================= */
 #kata {
-    background-color: var(--warna2);
+    background-color: aquamarine ;
 }
 
 .wrapper{
     display: flex;
-    max-width: 100%;
+    width: 100%;
     position: relative;
+    overflow-x: hidden;
   }
-  .wrapper i{
+
+.wrapper i{
     top: 50%;
     height: 44px;
     width: 44px;
