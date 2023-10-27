@@ -111,7 +111,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     background-color: #08031c;
-    height: 100vh;
 }
 main {
     padding: 0px;
@@ -214,7 +213,7 @@ footer {
     padding: auto 100px;
     text-align: center;
     position: relative;
-    color: #FFF;
+    color: #000000;
 }
 
 @media screen and (max-width:1000px) {
@@ -222,24 +221,5 @@ footer {
         width: 100%;
         padding: 0;
     }
-}
-
-/*===========kami=========*/
-
-#kami {
-    height: 500px;
-    width: 350px;
-}
-.kartu {
-    height: 100%;
-    width: 100%;
-}
-.front, .back {
-    height: 100%;
-    width: 100%;
-}
-
-.a {
-    background-image: url(../assets/img/dapa.jpg);
 }
 
