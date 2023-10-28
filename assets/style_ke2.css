@@ -1,7 +1,7 @@
 /*AKU KENE YA KOLIP BEN GA RUSAK*/
 /* ==================================================ABOUT========================================================================= */
 #about {
-    background-color: var(--warna1);
+    background-color: var(--bg);
 }
 
 .editorial {
@@ -165,7 +165,7 @@
  
 /* ==================================================KOMENTAR========================================================================= */
 #komentar {
-  background-color: var(--warna1);
+  background-color: var(--bg);
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr; /* 1:2 ratio */
@@ -203,6 +203,8 @@
   height: 250px; /* Set the height to your desired size */
   background-color: transparent;
   border: transparent; /* Add a border */
+  font-family: 'Quicksand';
+  font-weight: 400;
   padding: 20px; /* Add padding for some spacing inside the textarea */
   font-size: 16px; /* Set the font size */
   resize: none; /* Disable resizing */
@@ -216,7 +218,6 @@
 
 
 .btn-box a{
-  margin-top:
   position: relative;
   display: inline-flex;
   justify-content: center;
