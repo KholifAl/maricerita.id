@@ -226,16 +226,15 @@
 
   border-radius: 20px 0 20px 20px;
   outline: none;
-  /* border: 1px solid #fff; */
+  color: #fff;
   cursor: pointer;
   font-size: 1.1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding-left: 20px; */
+  /* padding: 0 20px; */
   font-weight: 700;
   background: var(--warna2);
-  color: #fff;
   box-shadow: 0 0 6px rgba(24, 24, 24, 0.3);
   transition: .5s;
 }
@@ -258,13 +257,16 @@
 
 .container_kom {
     width: auto;
+    position: relative;
     height: 500px;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    border: 10px solid var(--warna2);
+    border-right: 15px solid var(--warna2);
     margin: 30px 0px;
     padding: 0 50px;
     overflow-y: auto;
     scrollbar-gutter: stable;
-    /* scrollbar-width: thin; */
+    scrollbar-width: 10px;
     /* scrollbar-color: rgba(0, 0, 0, 0.5) transparent; */
 
     border-radius: 20px 20px 0 20px;
@@ -272,22 +274,37 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
+  .big-con {
+    background-color: bisque;
+  }
+  
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   
   ::-webkit-scrollbar-track {
+    position: absolute;
+    right: 30px;
+    top: 10px;
     background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    overflow: hidden;
+    border-radius: 0 10px 10px 0;
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
   }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0 10px 10px 0;
+  }
+
   
   .post {
-    margin: 10px 0;
+    margin: 0px 0 8px;
     max-height: 100%;
     overflow-y: auto;
     border-radius: 5px;
@@ -311,78 +328,157 @@
   }
 
 /* ==================================================KAMI QUOTES========================================================================= */
-/* #kata {
-    background-color: aquamarine ;
-} */
+#kata {
+    /* background-color: aquamarine ; */
+}
 
-.wrapper{
-    display: flex;
-    width: 100%;
-    position: relative;
-    overflow-x: hidden;
+
+.Kata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card__container {
+  padding-block: 5rem;
+  background-color: red;
+}
+
+.card__content {
+  background-color: blue;
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__article {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__image {
+  position: relative;
+  background-color: var(--first-color-light);
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__data {
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card__img {
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.card__shadow {
+  width: 200px;
+  height: 200px;
+  background-color: var(--first-color-alt);
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  filter: blur(45px);
+}
+
+.card__name {
+  font-size: var(--h2-font-size);
+  color: var(--second-color);
+  margin-bottom: .75rem;
+}
+
+.card__description {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+
+.card__button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: .75rem 1.5rem;
+  border-radius: .25rem;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+/* Swiper class */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: var(--second-color);
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: hsl(212, 32%, 40%);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .card__data {
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
   }
 
-.wrapper i{
-    top: 50%;
-    height: 44px;
-    width: 44px;
-    color: #343F4F;
-    cursor: pointer;
-    font-size: 1.15rem;
-    position: absolute;
-    text-align: center;
-    line-height: 44px;
-    background: #fff;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
   }
-  .wrapper i:active{
-    transform: translateY(-50%) scale(0.9);
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 1120px;
   }
-  .wrapper i:hover{
-    background: #f2f2f2;
+
+  .swiper-button-prev {
+    left: -1rem;
   }
-  .wrapper i:first-child{
-    left: -22px;
-    display: none;
+  .swiper-button-next {
+    right: -1rem;
   }
-  .wrapper i:last-child{
-    right: -22px;
-  }
-  .wrapper .carousel{
-    font-size: 0px;
-    cursor: pointer;
-    overflow: hidden;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-  }
-  .carousel.dragging{
-    cursor: grab;
-    scroll-behavior: auto;
-  }
-  .carousel.dragging img{
-    pointer-events: none;
-  }
-  .carousel img{
-    height: 340px;
-    object-fit: cover;
-    user-select: none;
-    margin-left: 14px;
-    width: calc(100% / 3);
-  }
-  .carousel img:first-child{
-    margin-left: 0px;
-  }
-  @media screen and (max-width: 900px) {
-    .carousel img{
-      width: calc(100% / 2);
-    }
-  }
-  @media screen and (max-width: 550px) {
-    .carousel img{
-      width: 100%;
-    }
-  }
+}
+
 
 
