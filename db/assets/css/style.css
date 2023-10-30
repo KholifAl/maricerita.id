@@ -1,0 +1,285 @@
+/* ------------------UTAMA--------------------------- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+h2 {
+    color: #00a2c6;
+}
+
+h3 {
+    color: #00a2c6;
+}
+
+:root {
+    --bg: #f5f5f5;
+
+    --warna1: #fff;
+    /* Replace with your primary color value */
+    --warna2: #EC594C;
+    /* Replace with your secondary color value */
+    --warna3: #343333;
+}
+
+.vh {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 0 80px;
+}
+
+.sosmed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.bundar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'montserrat';
+    font-size: 37px;
+    font-weight: 600;
+    color: #fff;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.ig {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    transition: .3s;
+}
+
+.fb {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    transition: .3s;
+}
+
+.x {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    transition: .3s;
+}
+
+.yt {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    transition: .3s;
+}
+
+.ig:hover {
+    background: linear-gradient(150deg, #4F5BD5 9.89%, rgba(79, 91, 213, 0.00) 56.54%), linear-gradient(213deg, #DA1B82 32.64%, #FEBF48 90.25%);
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 9px rgba(255, 255, 255, 0.20));
+}
+
+.fb:hover {
+    background: #1877F2;
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 9px rgba(255, 255, 255, 0.20));
+}
+
+.x:hover {
+    background: #0f0f0f;
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 9px rgba(255, 255, 255, 0.20));
+}
+
+.yt:hover {
+    background: #F00;
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 9px rgba(255, 255, 255, 0.20));
+}
+
+#xtwt {
+    height: 30px;
+    fill: #FFF;
+}
+
+/* ========================================HEADER================================================================ */
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: #08031c;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 0px;
+    overflow: auto;
+    background: var(--bg);
+    /* background: linear-gradient(to right, #cbbeff 0%, #ffc6d8 100%);
+    background-size: 400%;
+    animation: gradient 15s ease infinite; */
+}
+
+/* @keyframes gradient {
+    0% {
+      background-position: 0%
+   
+  50%;
+    }
+    50% {
+      background-position: 100%
+   
+  50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } */
+
+  
+
+.logo {
+    display: flex;
+    height: 50px;
+    position: relative;
+    color: var(--warna1);
+
+}
+
+.navigation {
+    display: flex;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400px;
+    text-decoration: none;
+    color: white;
+
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    /* display: none; */
+    background-color: red;
+    z-index: 1000;
+    /* Add a z-index to ensure the navigation is on top */
+    padding: 5px;
+    gap: 20px;
+}
+
+.btnLogin-popup {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    z-index: 100;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* SECTIONNN */
+/* ==================================================HEADER========================================================================= */
+#home {
+    background: linear-gradient(45deg, #EC594C, #fc7165);
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.kepala {
+    font-size: 20px;
+
+    background-image: url(../image/hutan.jpg);
+    text-align: left;
+    color: rgb(22, 22, 22);
+
+}
+
+.gambar img {
+    width: auto;
+    height: 500px;
+}
+
+/* ==================================================CONTACT========================================================================= */
+#contact {
+    justify-content: center;
+    height: 560px;
+    width: 100%;
+    padding: 70px 0;
+    padding: auto 100px;
+    text-align: center;
+    position: relative;
+    color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+  
+
+
+}
+
+@media screen and (max-width:1000px) {
+
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+#kami {
+    background-color: var(--warna2);
+    margin-top: 60px;
+    padding-top: 50px;
+}

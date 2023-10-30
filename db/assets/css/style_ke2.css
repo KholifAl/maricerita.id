@@ -1,0 +1,742 @@
+/*AKU KENE YA KOLIP BEN GA RUSAK*/
+/* ==================================================ABOUT========================================================================= */
+
+
+.bg-circle {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  filter: blur(160px);
+  position: absolute;
+  overflow-x: hidden;
+}
+
+.circ1{
+  background-color: #EC594C;
+  right: -60px;
+  opacity: 70%;
+  top: 300vh;
+  z-index: 0;
+}
+
+.circ2{
+  background-color: #EC594C;
+  right: -40px;
+  height: 200px;
+  width: 200px;
+  top: 150vh;
+  filter: blur(150px);
+  z-index: 0;
+}
+
+.circ3{
+  background-color: #EC594C;
+  left: -100px;
+  top: 180vh;
+  z-index: 0;
+}
+
+#about {
+    background-color: var(--bg);
+    overflow: hidden;
+}
+
+
+.editorial {
+  display: block;
+  width: 100%;
+  height: 60px;
+  max-height: 60px;
+  margin: 0;
+  z-index:5;
+  bottom:0px;
+  position:absolute;
+  left:0px;
+  float:left;
+}
+.four {
+  z-index:20;
+  top: 400vh;
+}
+.parallax1 > use {
+  animation: move-forever1 10s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+.parallax2 > use {
+  animation: move-forever2 8s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+.parallax3 > use {
+  animation: move-forever3 6s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+.parallax4 > use {
+  animation: move-forever4 4s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+@keyframes move-forever3 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever4 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+.col {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+  align-items: center;
+  /* margin-right: 60px; */
+}
+
+
+.con img {
+  height: 480px;
+
+}
+
+.square {
+  z-index: 1; /* Put square1 in front */
+  height: 250px;
+  width: 180px;
+  left: 300px;
+  top: 1050px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 204, 178, 0.4);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: absolute;
+
+  border-radius: 30px 30px 0 30px;
+
+}
+
+.ab-text {
+
+  font-size: 12px;
+  text-align: left;
+  color: var(--warna3);
+  font-size: 50px;
+  z-index: 2;  
+} 
+
+
+.ab-text h3 {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--warna3);
+  margin-bottom: 20px;
+  z-index: 4;
+} 
+
+.custom-ol {
+  list-style: none; /* Remove default list styles */
+  counter-reset: custom-counter; /* Initialize the custom counter */
+}
+
+/* Style for list items */
+.custom-ol li {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 45px;
+}
+
+/* Custom circular numbering */
+.custom-ol li::before {
+  content: counter(custom-counter); /* Use a counter for numbering */
+  counter-increment: custom-counter; /* Increment the custom counter */
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50% 50% 50% 0; /* Make it a circle */
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--warna1);
+  background-color: var(--warna2);}
+
+
+
+
+ 
+/* ==================================================KOMENTAR========================================================================= */
+#komentar {
+  background-color: var(--bg);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.komentar {
+  gap: 80px;
+}
+
+.col-kom {
+  text-align: left;
+  z-index: 5;
+}
+.text-kom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-kom h1 {
+  width: 100%;
+  z-index: 5;
+}
+
+.col-area {
+  background-color: rgb(255, 255, 255);
+  height: 250px;
+  width: 400px;
+  margin: 10px 0 15px;
+  border-radius: 20px 20px 0 20px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
+.floating-alert {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: red;
+  color: white;
+  padding: 10px;
+  display: none;
+  z-index: 9999;
+}
+
+.custom-area {
+  width: 400px; /* Set the width to your desired size */
+  height: 250px; /* Set the height to your desired size */
+  background-color: transparent;
+  border: transparent; /* Add a border */
+  font-family: 'Quicksand';
+  font-weight: 400;
+  padding: 20px; /* Add padding for some spacing inside the textarea */
+  font-size: 16px; /* Set the font size */
+  resize: none; /* Disable resizing */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+.custom-area:focus {
+  border: none; /* Remove the border */
+  outline: none; /* Remove the outline */
+}
+
+
+.btn-box {
+  width: 124px;
+  height: 45px;
+  border: none;
+  border-radius: 20px 0 20px 20px;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 20px; */
+  font-weight: 700;
+  background: var(--warna2);
+  box-shadow: 0 0 6px rgba(24, 24, 24, 0.3);
+  transition: .5s;
+}
+
+.btn-box:hover {
+  /* background-color: #FFF;
+  color: #2D0C41; */
+  background: var(--warna2);
+  color: #fff;
+  scale: 1.03;
+  /* box-shadow: 0 0 13px rgba(255, 0, 0, 0.5); */
+}
+
+.con-kom {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+
+}
+
+.container_kom {
+    display: flex; 
+    flex-direction: row;
+    /* border: 50px solid (--warna2); */
+    /* scrollbar-color: rgba(0, 0, 0, 0.5) transparent; */
+    background-color: var(--warna2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px 20px 0 20px;
+    background-color: var(--warna2);
+    border: 5px solid var(--warna2);
+  }
+
+  .conkom2 {
+    width: auto;
+    position: relative;
+    height: 500px;
+    border: 10px solid var(--warna2);
+    /* border-right: 15px solid var(--warna2); */
+    margin: 0px;
+    overflow-y: auto;
+    flex-direction: column;
+    scrollbar-gutter: stable;
+    scrollbar-width: 10px;
+    border-radius: 20px 20px 0 20px;
+    scroll-behavior: smooth;
+    /* justify-content: center;
+    align-items: center; */
+  }
+
+  .big-con {
+    background-color: bisque;
+  }
+  
+  .conkom2::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .conkom2::-webkit-scrollbar-track {
+
+    /* margin-left: 20px; */
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .conkom2::-webkit-scrollbar-thumb {
+    background-color: rgb(231, 231, 231);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+  }
+
+  .conkom2::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0 10px 10px 0;
+  }
+
+  
+  .post {
+    margin: 0px 10px 8px 0;
+
+    padding: 20px;
+    text-align: left;
+    max-height: 100%;
+    overflow-y: auto;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .post-circle {
+    height: 50px;
+    width: 50px;
+    background-color: #EC594C;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .post-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: left;
+  }
+  
+  
+
+  .post-header h2 {
+    color: var(--warna3);
+    font-weight: 700;
+  }
+  
+  .post-content {
+    padding: 10px 0;
+
+  }
+
+  .p-kom {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .kom-but {
+    margin-right: 5px;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    align-items: center;
+
+    margin: 20px 5px;
+    padding: 100px 5px;
+    border-radius: 20px;
+    justify-items: center;
+  }
+
+  .bt-circle {
+    height: 50px;
+    width: 50px;
+    display: table-row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+
+
+  }
+
+  .n {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: 3px solid #fff;
+    user-select: none;
+    color: white;
+    
+    font-size: 45px;
+    transition: .2s;
+  }
+
+  .n:hover {
+    background-color: #fff;
+    color: var(--warna2);
+  }
+
+
+/* ==================================================KAMI QUOTES========================================================================= */
+#kata {
+    background-color: var(--bg) ;
+}
+
+
+.Kata {
+  height: 100vh;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
+
+}
+
+.k {
+  text-align: center;
+}
+.flex {
+  /* display: inline-block; */
+  display: block;
+  /* display: flex; */
+  /* align-items: center; */
+  /* display: inline-flex; */
+  margin-top: 15px;
+  padding: 20px 10px;
+  background-color: var(--warna2);
+  border-radius: 60px 0 60px 60px;
+}
+
+
+
+.card__container {
+  padding-block: 6rem;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  /* width :2000px ; */
+  border-radius: 10px;
+}
+
+.swiper {
+  
+}
+
+.card__content {
+  align-items: center;
+  /* width: 500px; */
+  /* padding: 30px; */
+  /* margin: 20px; */
+  margin-inline: 0rem;
+  border-radius: 1.25rem;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.button-prev, .button-next {
+  color: #fff;
+  /* position: absolute;
+  right: 0; */
+  font-size: 60px;
+}
+
+
+.card__article {
+  margin-bottom: 40px;
+  /* padding: 10px 0; */
+  /* margin: 120px; */
+  /* padding: 20px 0; */
+  /* height: 700px; */
+  background-color: #fff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card__image {
+  position: relative;
+  height: 120px;
+  background-color: rgb(116, 6, 111);
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__data {
+  min-height: 200px;
+  background-color: var(--warna1);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card__img {
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.card__shadow {
+  width: 200px;
+  height: 200px;
+  background-color:rgb(213, 12, 86);
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  filter: blur(45px);
+}
+
+.card__name {
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--warna2);
+  margin-bottom: .75rem;
+}
+
+.card__description {
+  font-size: 2em;
+  color: var(--warna3);
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+}
+
+.card__button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: .75rem 1.5rem;
+  border-radius: .25rem;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+/* Swiper class */
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 4rem;
+  color: var(--second-color);
+  color: #d5d5d5;
+  display: none;
+  user-select: none;
+  transition: ease .5s;
+}
+
+.swiper-button-prev:hover ,
+.swiper-button-next:hover {
+  color: #fff;
+}
+
+.swiper-button-prev {
+  left: 0rgb(214, 73, 73)
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+
+.swiper-pagination-bullet {
+  background-color: hsl(212, 32%, 40%);;
+
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+
+}
+
+.kat {
+  font-size: 20px;
+  width: 200px;
+  margin: 25px auto 5px auto;
+  background-color: #fff;
+  color: var(--warna3);
+}
+
+
+.kat:hover {
+  color: var(--warna3);
+  background-color: #fff;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .card__data {
+    padding: 1rem;
+  }
+}
+
+/* INI WOIIII+============================ */
+
+@media screen and (max-width: 768px) {
+  .vh {
+    padding: 30px;
+    height: auto !important;
+    /* height: 100%; */
+  }
+
+  .editorial {
+    bottom: 20px;
+  }
+
+  .four {
+    top: 600vh;
+  }
+
+  #about {
+    height: 150vh;
+  }
+
+  .con img {
+    height: 400px;
+  
+  }
+  .ab-text {
+    text-align: center;
+  }
+
+  .ab-text h1{
+    line-height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .col {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .custom-ol li {
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  #komentar {
+    display: block;
+  }
+
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 1300px;
+  }
+
+
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+}
+
+
+
