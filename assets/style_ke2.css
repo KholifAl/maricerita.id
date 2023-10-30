@@ -479,7 +479,6 @@
 
 
 .card__container {
-
   padding-block: 6rem;
   display: flex;
   align-items: center;
@@ -502,13 +501,23 @@
 
 .button-prev, .button-next {
   color: #fff;
-  background-color: purple;
   /* position: absolute;
   right: 0; */
   font-size: 60px;
 }
 
+:root {
+--first-color: hsl(38, 92%, 58%);
+--first-color-light: hsl(38, 100%, 78%);
+--first-color-alt: hsl(32, 75%, 50%);
+--second-color: hsl(195, 75%, 52%);
+--dark-color: hsl(212, 40%, 12%);
+--white-color: hsl(212, 4%, 95%);
+--body-color: hsl(212, 42%, 15%);
+--container-color: hsl(212, 42%, 20%);}
+
 .card__article {
+  margin-bottom: 20px;
   /* padding: 10px 0; */
   /* margin: 120px; */
   /* padding: 20px 0; */
@@ -521,14 +530,15 @@
 
 .card__image {
   position: relative;
-  background-color: var(--first-color-light);
+  height: 150px;
+  background-color: purple;
   padding-top: 1.5rem;
   margin-bottom: -.75rem;
 }
 
 .card__data {
-  background-color: var(--container-color);
-  padding: 1.5rem 2rem;
+  background-color: var(--warna1);
+  padding: 1rem 2rem;
   border-radius: 1rem;
   text-align: center;
   position: relative;
@@ -545,7 +555,7 @@
 .card__shadow {
   width: 200px;
   height: 200px;
-  background-color: var(--first-color-alt);
+  background-color:red;
   border-radius: 50%;
   position: absolute;
   top: 3.75rem;
@@ -556,13 +566,17 @@
 }
 
 .card__name {
-  font-size: var(--h2-font-size);
-  color: var(--second-color);
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--warna2);
   margin-bottom: .75rem;
 }
 
 .card__description {
-  font-weight: 500;
+  font-size: 2.5em;
+  color: var(--warna3);
+  font-weight: 700;
   margin-bottom: 1.75rem;
 }
 
@@ -605,7 +619,7 @@
 
 
 .swiper-pagination-bullet {
-  background-color: hsl(212, 32%, 40%);
+  background-color: hsl(212, 32%, 40%);;
 
   opacity: 1;
 }
@@ -618,7 +632,7 @@
 .kat {
   font-size: 20px;
   width: 200px;
-  margin: 30px 0 5px;
+  margin: 25px 0 5px;
   background-color: #fff;
   color: var(--warna3);
 }
