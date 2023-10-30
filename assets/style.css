@@ -4,6 +4,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
 }
 
 h2 {
@@ -118,12 +119,13 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     background-color: #08031c;
+    overflow-x: hidden;
 }
 
 main {
     padding: 0px;
     overflow: auto;
-    background: #f1e9ff;
+    background: var(--bg);
     /* background: linear-gradient(to right, #cbbeff 0%, #ffc6d8 100%);
     background-size: 400%;
     animation: gradient 15s ease infinite; */
@@ -270,4 +272,6 @@ footer {
 
 #kami {
     background-color: var(--warna2);
+    margin-top: 60px;
+    padding-top: 50px;
 }

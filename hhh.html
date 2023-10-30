@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+  <style>
+    .conkom2 {
+      overflow: hidden;
+      height: 200px;
+    }
+
+    .kom-but {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .bt-circle {
+      float: left;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+    }
+
+    .bt-circle.n {
+      background-color: white;
+    }
+
+    .bt-circle.n i {
+      color: black;
+      font-size: 20px;
+    }
+
+    .check {
+      float: right;
+      width: 50px;
+      height: 50px;
+      background-color: green;
+      text-align: center;
+      line-height: 50px;
+    }
+  </style>
+  <script>
+    (function() {
+      const container = document.querySelector('.conkom2');
+      const upButton = document.querySelector('.kom-but .bt-circle.n i');
+      const downButton = document.querySelector('.kom-but .bt-circle.n:last-child i');
+
+      upButton.addEventListener('click', function() {
+        container.scrollTop -= 100;
+      });
+
+      downButton.addEventListener('click', function() {
+        container.scrollTop += 100;
+      });
+    })();
+  </script>
+</head>
+<body>
+  <div class="conkom2">
+    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h2>
+    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h2>
+    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h2>
+    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h2>
+    </div>
+
+  <div class="kom-but">
+    <div class="bt-circle"></div>
+    <div class="bt-circle n"><i class='bx bx-chevron-up'></i></div>
+    <div class="bt-circle n"><i class='bx bx-chevron-down'></i></div>
+    <div class="check"></div>
+  </div>
+</body>
+</html>
