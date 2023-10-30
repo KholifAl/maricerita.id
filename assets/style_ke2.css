@@ -329,33 +329,78 @@
 
 /* ==================================================KAMI QUOTES========================================================================= */
 #kata {
-    /* background-color: aquamarine ; */
+    background-color: var(--bg) ;
 }
 
 
 .Kata {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
 }
+
+
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin-top: 15px;
+  padding: 20px 10px;
+  background-color: var(--warna2);
+  border-radius: 30px 0 30px 30px;
+}
+
+
 
 .card__container {
-  padding-block: 5rem;
-  background-color: red;
+
+  padding-block: 6rem;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  /* width :2000px ; */
+  border-radius: 10px;
 }
+
 
 .card__content {
-  background-color: blue;
-  margin-inline: 1.75rem;
-  border-radius: 1.25rem;
-  overflow: hidden;
+  align-items: center;
+  /* width: 500px; */
+  /* padding: 30px; */
+  /* margin: 20px; */
+  margin-inline: 0rem;
+  /* border-radius: 1.25rem; */
+  overflow-x: hidden;
+  margin: 0;
 }
 
+.button-prev, .button-next {
+  color: #fff;
+  background-color: purple;
+  /* position: absolute;
+  right: 0; */
+  font-size: 60px;
+}
+
+.button-prev {
+
+}
+.button-next {
+  
+}
 .card__article {
-  width: 300px; /* Remove after adding swiper js */
+  /* padding: 10px 0; */
+  /* margin: 120px; */
+  /* padding: 20px 0; */
+  /* height: 700px; */
+  background-color: #fff;
   border-radius: 1.25rem;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .card__image {
@@ -415,35 +460,55 @@
 }
 
 /* Swiper class */
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  content: "";
-}
+
 
 .swiper-button-prev,
 .swiper-button-next {
   width: initial;
   height: initial;
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--second-color);
+  color: #d5d5d5;
   display: none;
+  user-select: none;
+  transition: ease .5s;
+}
+
+.swiper-button-prev:hover ,
+.swiper-button-next:hover {
+  color: #fff;
 }
 
 .swiper-button-prev {
-  left: 0;
+  left: 0rgb(214, 73, 73)
 }
 
 .swiper-button-next {
   right: 0;
 }
 
+
 .swiper-pagination-bullet {
   background-color: hsl(212, 32%, 40%);
+
   opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
   background-color: var(--second-color);
+
+}
+
+.kat {
+  font-size: 20px;
+  width: 200px;
+  margin: 30px 0 5px;
+  background-color: #fff;
+  color: var(--warna3);
+}
+.kat:hover {
+  color: var(--warna3);
+  background-color: #fff;
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -464,13 +529,15 @@
   .swiper-button-prev {
     display: block;
   }
+
 }
 
 /* For large devices */
 @media screen and (min-width: 1120px) {
   .card__container {
-    max-width: 1120px;
+    max-width: 1300px;
   }
+
 
   .swiper-button-prev {
     left: -1rem;
