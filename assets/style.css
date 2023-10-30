@@ -29,6 +29,7 @@ h3 {
     height: 100vh;
     width: 100%;
     text-align: center;
+    padding: 0 80px;
 }
 
 .sosmed {
@@ -226,6 +227,7 @@ footer {
 /* ==================================================HEADER========================================================================= */
 #home {
     background: linear-gradient(45deg, #EC594C, #fc7165);
+
 }
 
 .container {
@@ -237,7 +239,7 @@ footer {
 
 .kepala {
     font-size: 20px;
-    padding: 60px;
+
     background-image: url(../image/hutan.jpg);
     text-align: left;
     color: rgb(22, 22, 22);
@@ -259,6 +261,12 @@ footer {
     text-align: center;
     position: relative;
     color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+  
+
+
 }
 
 @media screen and (max-width:1000px) {

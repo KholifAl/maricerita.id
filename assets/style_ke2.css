@@ -1,6 +1,7 @@
 /*AKU KENE YA KOLIP BEN GA RUSAK*/
 /* ==================================================ABOUT========================================================================= */
 
+
 .bg-circle {
   height: 300px;
   width: 300px;
@@ -116,22 +117,18 @@
 
 .col {
   height: 100%;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 150px;
   align-items: center;
-  padding: 0 100px;
+  /* margin-right: 60px; */
 }
 
-.con {
-  height: 450px;
 
-  min-width: 350px;
+.con img {
+  height: 480px;
 
-  background-color: red;
-  border-radius: 0px 80px 80px 80px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .square {
@@ -150,9 +147,8 @@
 
 }
 
-
-
 .ab-text {
+
   font-size: 12px;
   text-align: left;
   color: var(--warna3);
@@ -190,14 +186,14 @@
   top: 6px;
   width: 30px;
   height: 30px;
-  /* border: 2px solid #007bff;  */
+
   border-radius: 50% 50% 50% 0; /* Make it a circle */
   text-align: center;
-  /* justify-items: center; */
+
   display: flex;
   justify-content: center;
   align-items: center;
-  /* line-height: 20px; */
+
   font-size: 16px;
   font-weight: 600;
   color: var(--warna1);
@@ -212,11 +208,10 @@
   background-color: var(--bg);
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 2fr; /* 1:2 ratio */
+  grid-template-columns: 1fr 2fr;
 }
 
 .komentar {
-  padding: 0 100px;
   gap: 80px;
 }
 
@@ -457,23 +452,26 @@
 
 .Kata {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
 
 }
 
-
+.k {
+  text-align: center;
+}
 .flex {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
+  /* display: inline-block; */
+  display: block;
+  /* display: flex; */
+  /* align-items: center; */
+  /* display: inline-flex; */
   margin-top: 15px;
   padding: 20px 10px;
   background-color: var(--warna2);
-  border-radius: 30px 0 30px 30px;
+  border-radius: 60px 0 60px 60px;
 }
 
 
@@ -487,6 +485,9 @@
   border-radius: 10px;
 }
 
+.swiper {
+  
+}
 
 .card__content {
   align-items: center;
@@ -506,18 +507,9 @@
   font-size: 60px;
 }
 
-:root {
---first-color: hsl(38, 92%, 58%);
---first-color-light: hsl(38, 100%, 78%);
---first-color-alt: hsl(32, 75%, 50%);
---second-color: hsl(195, 75%, 52%);
---dark-color: hsl(212, 40%, 12%);
---white-color: hsl(212, 4%, 95%);
---body-color: hsl(212, 42%, 15%);
---container-color: hsl(212, 42%, 20%);}
 
 .card__article {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   /* padding: 10px 0; */
   /* margin: 120px; */
   /* padding: 20px 0; */
@@ -530,8 +522,8 @@
 
 .card__image {
   position: relative;
-  height: 150px;
-  background-color: purple;
+  height: 120px;
+  background-color: rgb(116, 6, 111);
   padding-top: 1.5rem;
   margin-bottom: -.75rem;
 }
@@ -555,7 +547,7 @@
 .card__shadow {
   width: 200px;
   height: 200px;
-  background-color:red;
+  background-color:rgb(213, 12, 86);
   border-radius: 50%;
   position: absolute;
   top: 3.75rem;
@@ -632,10 +624,12 @@
 .kat {
   font-size: 20px;
   width: 200px;
-  margin: 25px 0 5px;
+  margin: 25px auto 5px auto;
   background-color: #fff;
   color: var(--warna3);
 }
+
+
 .kat:hover {
   color: var(--warna3);
   background-color: #fff;
@@ -649,11 +643,62 @@
   }
 }
 
+/* INI WOIIII+============================ */
+
+@media screen and (max-width: 768px) {
+  .vh {
+    padding: 30px;
+    height: auto !important;
+    /* height: 100%; */
+  }
+
+  .editorial {
+    bottom: 20px;
+  }
+
+  .four {
+    top: 600vh;
+  }
+
+  #about {
+    height: 150vh;
+  }
+
+  .con img {
+    height: 400px;
+  
+  }
+  .ab-text {
+    text-align: center;
+  }
+
+  .ab-text h1{
+    line-height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .col {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .custom-ol li {
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  #komentar {
+    display: block;
+  }
+
+}
+
 /* For medium devices */
 @media screen and (min-width: 768px) {
   .card__content {
     margin-inline: 3rem;
   }
+
 
   .swiper-button-next,
   .swiper-button-prev {
