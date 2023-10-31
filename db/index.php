@@ -13,8 +13,7 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"rel="stylesheet">
     <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
     <title>One Word For Today</title>
 </head>
@@ -141,9 +140,37 @@
                             include "koneksi.php";
                             $kom_sql = "SELECT * FROM komentar ORDER BY created_at DESC";
                             $result = mysqli_query($koneksi, $kom_sql);
+
+                            
                     
                             if (mysqli_num_rows($result) > 0) { 
-                                while ($row = mysqli_fetch_assoc($result)) { ?>
+                                while ($row = mysqli_fetch_assoc($result)) { 
+                                    
+                                    $mysqlTimestamp = $row["created_at"];
+
+                                    $dateTime = new DateTime($mysqlTimestamp);
+
+                                    $currentDateTime = new DateTime();
+                                    $interval = $dateTime->diff($currentDateTime);
+
+                                    if ($interval->y > 0) {
+                                        $formattedTimestamp = $dateTime->format('M j, Y');
+                                    } elseif ($interval->m > 0) {
+                                        $formattedTimestamp = $interval->m . ' bulan';
+                                    } elseif ($interval->d > 0) {
+                                        $formattedTimestamp = $interval->d . ' hari';
+                                    } elseif ($interval->h > 0) {
+                                        $formattedTimestamp = $interval->h . ' jam';
+                                    } elseif ($interval->i > 0) {
+                                        $formattedTimestamp = $interval->i . ' menit';
+                                    } else {
+                                        $formattedTimestamp = 'just now';
+                                    }
+
+                                    // Output the Twitter-like formatted timestamp
+                                    
+                                    
+                                    ?>
                                     
                                     <div class="post">
                                         <div class="post-header">
@@ -156,7 +183,7 @@
                                         <p><?php echo $row["komentar"] ?></p>
                                     </div>
                                     <div class="p-kom">
-                                        <span><?php echo $row["created_at"] ?></span>
+                                        <span><?php echo $formattedTimestamp?></span>
                                     </div>
                                     </div>
                                 <?php
@@ -233,7 +260,7 @@
                                         <p class="card__description">
                                             <?php echo $kat["kata"] ?>
                                         </p>
-                                        <h3 class="card__name"><?php echo $kat["nama"] ?></h3>
+                                        <h3 class="card__name">- <?php echo $kat["nama"] ?></h3>
                                     </div>
                                 </article>
 
