@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style_ke2.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
+
 
 
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,7 +66,7 @@
         echo "Anda Belum Login";
         }
         ?>
-                <a href='logout.php' >Logout Akun</a>
+            <a href='logout.php' >Logout Akun</a>
 
     </section>
     
@@ -139,13 +140,23 @@
                             <?php
                             include "koneksi.php";
                             $kom_sql = "SELECT * FROM komentar ORDER BY created_at DESC";
-                            $result = mysqli_query($koneksi, $kom_sql);
+                            $result = mysqli_query($koneksi, $kom_sql);                          
 
-                            
-                    
                             if (mysqli_num_rows($result) > 0) { 
-                                while ($row = mysqli_fetch_assoc($result)) { 
+                                while ($row = mysqli_fetch_assoc($result)) {
                                     
+                                    $name = $row['nama'];
+                                    $pic_sql = "SELECT * FROM user WHERE user_name = '$name'";
+                                    $res = mysqli_query($koneksi, $pic_sql) ;
+                                    if ($row2 = mysqli_fetch_assoc($res)){
+                                        $foto = $row2['profile'];
+                                    }
+
+                                    else {
+                                        $foto = "base.png";
+                                    };
+                                    
+
                                     $mysqlTimestamp = $row["created_at"];
 
                                     $dateTime = new DateTime($mysqlTimestamp);
@@ -175,7 +186,7 @@
                                     <div class="post">
                                         <div class="post-header">
                                         <div class="post-circle">
-                                        <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt="Profile picture">
+                                        <img src="Upload/uploads/<?php echo $foto?>" alt="Profile picture">
                                     </div>
                                     <h2><?php echo $row["nama"] ?></h2>
                                     </div>
@@ -200,7 +211,33 @@
                         
                         </div>
                         <div class="kom-but">
-                            <div class="bt-circle"></div>
+                            
+                        <?php
+                        include "koneksi.php";
+                        if (isset($_SESSION['uname'])) {
+                        $uname = $_SESSION['uname'];
+                        $sql = "SELECT * FROM user WHERE user_name ='$uname'";
+                        $result = mysqli_query($koneksi, $sql);
+                        $row = mysqli_fetch_assoc($result);
+                        
+                        ?>
+                            <div class="bt-circle">
+                            <img src="Upload/uploads/<?=$row['profile']?>" alt="Foto Profil">
+                            
+                            
+                            </div>
+                        <?php 
+                        } else { 
+                            
+                        ?>
+                        <!-- <div class="bt-circle">
+
+                        </div> -->
+
+                        <?php 
+                        } 
+                        ?>
+
                             <div id="scroll-up" class="bt-circle n"><i class='bx bx-chevron-up' ></i></div>
                             <div id="scroll-down" class="bt-circle n"><i class='bx bx-chevron-down' ></i></div>
                             <div class="check">

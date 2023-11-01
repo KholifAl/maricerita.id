@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (mysqli_query($koneksi, $sql)) {
                 echo "Data telah disimpan. <a href='index.php'>Lihat Data</a>";
             } else {
-                echo   "Terjadi kesalahan: " . mysqli_error($koneksi);
+                echo "Terjadi kesalahan: " . mysqli_error($koneksi);
             }}
         }}
     
