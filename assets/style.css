@@ -7,14 +7,6 @@
 
 }
 
-h2 {
-    color: #00a2c6;
-}
-
-h3 {
-    color: #00a2c6;
-}
-
 :root {
     --bg: #f5f5f5;
 
@@ -109,6 +101,48 @@ h3 {
     fill: #FFF;
 }
 
+.meet {
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    align-items: center;
+}
+
+.kartu {
+    height: 400px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+
+.dapa{
+    height: 400px;
+    width: 350px;
+    border-radius: 3px;
+}
+
+.kolip{
+    height: 400px;
+    width: 350px;
+    border-radius: 3px;
+}
+
+.intro {
+    height: 125px;
+    width: 350px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    position: absolute;
+    align-items: center;
+    vertical-align: center;
+    background: rgb(27,27,27, .5);
+    color: white;
+    border-radius: 5px;
+}
+
+.intro ~ h1 {
+    font-size: 100px;;
+}
 /* ========================================HEADER================================================================ */
 
 html {
@@ -152,7 +186,7 @@ main {
     }
   } */
 
-  
+
 
 .logo {
     display: flex;
@@ -164,6 +198,7 @@ main {
 
 .navigation {
     display: flex;
+    vertical-align: middle;
 }
 
 nav a {
@@ -267,11 +302,7 @@ footer {
     color: #000000;
 }
 
-@media screen and (max-width: 768px) {
-  
-
-
-}
+@media screen and (max-width: 768px) {}
 
 @media screen and (max-width:1000px) {
 
