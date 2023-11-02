@@ -114,6 +114,8 @@ h3 {
 html {
     scroll-behavior: smooth;
     scrollbar-width: none;
+    max-width: 1000px;
+
 }
 
 body {
@@ -121,11 +123,13 @@ body {
     font-weight: 600;
     background-color: #08031c;
     overflow-x: hidden;
+    overflow: hidden;
+
 }
 
 main {
     padding: 0px;
-    overflow: auto;
+    /* overflow: auto; */
     background: var(--bg);
     /* background: linear-gradient(to right, #cbbeff 0%, #ffc6d8 100%);
     background-size: 400%;
@@ -211,7 +215,7 @@ header {
     position: fixed;
     width: 100%;
     height: 150px;
-    z-index: 100;
+    z-index: 1000;
 }
 
 footer {

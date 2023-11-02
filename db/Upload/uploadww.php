@@ -15,7 +15,7 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
 	if ($error === 0) {
 		if ($img_size > 125000) {
 			$em = "Sorry, your file is too large.";
-		    header("Location: index.php?error=$em");
+		    header("Location: index-img.php?error=$em");
 		}else {
 			$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
 			$img_ex_lc = strtolower($img_ex);
@@ -28,19 +28,24 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
 				move_uploaded_file($tmp_name, $img_upload_path);
 
 				// Insert into Database
-				$sql = "INSERT INTO user(profile) VALUES('$new_img_name')";
+				$sql = "INSERT INTO usr(profile) VALUES('$new_img_name')";
 				mysqli_query($koneksi, $sql);
 				header("Location: view.php");
 			}else {
 				$em = "You can't upload files of this type";
-		        header("Location: index.php?error=$em");
+		        header("Location: index-img.php?error=$em");
 			}
 		}
 	}else {
 		$em = "unknown error occurred!";
-		header("Location: index.php?error=$em");
+		header("Location: index-img.php?error=$em");
 	}
 
 }else {
-	header("Location: index.php");
+	header("Location: index-img.php");
 }
+
+    // unset($_SESSION['name']);
+    // unset($_SESSION['email']);
+    // unset($_SESSION['pass']);
+?>

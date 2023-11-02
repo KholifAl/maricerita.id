@@ -21,6 +21,11 @@
 
 <body>
 
+        <div class="bg-circle circ1"></div>
+        <div class="bg-circle circ2"></div>
+        <div class="bg-circle circ3"></div>
+
+
 
     <header>
     <nav>
@@ -33,7 +38,7 @@
                 <li><a href="#kami" class="news">Kami</a></li>
                 <li><a href="#contact" class="contact">Contact</a></li>
             </ul>
-            <a href="login.php" class="btnLogin-popup">Login</a>
+            <a href="login/" class="btnLogin-popup">Login</a>
             
         </nav>
         <!-- <div class="hamburger" id="hamburger">
@@ -45,6 +50,35 @@
 
     <main>
 
+        <div class="bgcon" id="blur" ></div>
+        <div class="col-kom2" id="popup" >
+            <h1 class="ab-text">Kata Untuk Hari Ini</h1>
+            <form action="textarea.php" method="post">
+                <div class="col-area2">
+                    <textarea style="width: 450px" class="custom-area" name="komentar" placeholder="Tulis Quotes..." maxlength="40"></textarea>
+                </div>
+                <div class="foot">
+                    <div class="bt-sub" onclick="toggle()" >Kembali</div>
+                    <button type="submit" class="bt-sub">Posting</button>
+                </div>
+            </div>
+        </form>
+        </div>
+
+
+        <!-- <div class="col-kom2" id="logout" >
+            <h1 class="ab-text">Kata Untuk Hari Ini</h1>
+            <form action="textarea.php" method="post">
+                <div class="col-area2">
+                    <textarea style="width: 450px" class="custom-area" name="komentar" placeholder="Tulis Quotes..." maxlength="40"></textarea>
+                </div>
+                <div class="foot">
+                    <div class="bt-sub" onclick="toggle()" >Kembali</div>
+                    <button type="submit" class="bt-sub">Posting</button>
+                </div>
+            </div>
+        </form>
+        </div> -->
     
     <section id="home" class="vh Judul">   
         <div class="container">
@@ -60,8 +94,8 @@
         unset($_SESSION['alert']);
         session_start();
 
-        if (isset($_SESSION['uname'])) {
-        echo "Selamat Datang " . $_SESSION['uname'] ." !";
+        if (isset($_SESSION['loguname'])) {
+        echo "Selamat Datang " . $_SESSION['loguname'] ." !";
         } else {
         echo "Anda Belum Login";
         }
@@ -71,9 +105,7 @@
     </section>
     
     <section id="about" class="vh About">
-        <div class="bg-circle circ1"></div>
-        <div class="bg-circle circ2"></div>
-        <div class="bg-circle circ3"></div>
+
         <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
             <defs>
                 <path id="gentle-wave" d="M-160 44c30 0 
@@ -221,11 +253,25 @@
                         $row = mysqli_fetch_assoc($result);
                         
                         ?>
-                            <div class="bt-circle">
-                            <img src="Upload/uploads/<?=$row['profile']?>" alt="Foto Profil">
-                            
-                            
-                            </div>
+                                <div class="bt-circle">
+                                    <img src="Upload/uploads/<?=$row['profile']?>" alt="Foto Profil">
+                                </div>
+
+                                <!-- <div class="sub-menu-wrap">
+                                    <div class="sub-menu">
+
+                                        <h2>Kholif Al Hamdhany</h2>
+                                    </div>
+                                </div> -->
+
+                            <!-- <div class="dropdown-square"></div> -->
+<!-- 
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div> -->
+
                         <?php 
                         } else { 
                             
@@ -234,16 +280,10 @@
 
                         </div> -->
 
-                        <?php 
-                        } 
-                        ?>
+                        <?php } ?>
 
                             <div id="scroll-up" class="bt-circle n"><i class='bx bx-chevron-up' ></i></div>
                             <div id="scroll-down" class="bt-circle n"><i class='bx bx-chevron-down' ></i></div>
-                            <div class="check">
-                                
-                                
-                            </div>
                         </div>
                 </div>
                 
@@ -295,7 +335,7 @@
                                     </div>
                                     <div class="card__data">
                                         <p class="card__description">
-                                            <?php echo $kat["kata"] ?>
+                                            " <?php echo $kat["kata"] ?> "
                                         </p>
                                         <h3 class="card__name">- <?php echo $kat["nama"] ?></h3>
                                     </div>
@@ -325,7 +365,7 @@
             </div>
                 </div>
                 <div class="btn-box kat">
-                    <a >Tulis Kata!</a>
+                    <a onclick="toggle()" >Tulis Kata!</a>
                 </div>
 
             </div>
