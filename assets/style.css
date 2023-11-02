@@ -148,7 +148,7 @@ main {
     }
   } */
 
-  
+
 
 .logo {
     display: flex;
@@ -160,6 +160,7 @@ main {
 
 .navigation {
     display: flex;
+    vertical-align: middle;
 }
 
 nav a {
@@ -263,11 +264,7 @@ footer {
     color: #000000;
 }
 
-@media screen and (max-width: 768px) {
-  
-
-
-}
+@media screen and (max-width: 768px) {}
 
 @media screen and (max-width:1000px) {
 
