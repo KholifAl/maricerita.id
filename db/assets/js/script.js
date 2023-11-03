@@ -49,3 +49,18 @@ scrollUpButton.addEventListener("click", () => {
 scrollDownButton.addEventListener("click", () => {
     container.scrollTop += 200; // Adjust the scroll distance as needed
 });
+
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        // Remove the "active" class from all links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Add the "active" class to the clicked link
+        this.classList.add('active');
+    });
+});
