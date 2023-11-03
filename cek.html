@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Your CSS code here */
+    </style>
+</head>
+<body>
+    <style>
+        .nav-link {
+            height: 100vh;
+        }
+    </style>
+    <nav>
+        <!-- Navigation links with href attributes pointing to sections on the same page -->
+        <ul class="navigation">
+            <li><a href="#home" class="home nav-link">Home</a></li>
+            <li><a href="#about" class="about nav-link">About</a></li>
+            <li><a href="#komentar" class="komentar nav-link">Cerita</a></li>
+            <li><a href="#kata" class="kata nav-link">Quotes</a></li>
+            <li><a href="#kami" class="kami nav-link">Kami</a></li>
+            <li><a href="#contact" class="contact nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections with matching IDs -->
+    <section id="home">
+        <h1>Home Section</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+    <section id="about">
+        <h1>About Section</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </section>
+    <section id="komentar">
+        <h1>Cerita Section</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+    <section id="kata">
+        <h1>Quotes Section</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </section>
+    <section id="kami">
+        <h1>Kami Section</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </section>
+    <section id="contact">
+        <h1>Contact Section</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </section>
+</body>
+<script>
+    const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        // Prevent the default link behavior
+        e.preventDefault();
+
+        // Remove the "active" class from all links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Add the "active" class to the clicked link
+        this.classList.add('active');
+    });
+});
+</script>
+</html>
+
+
+
+
+
+
