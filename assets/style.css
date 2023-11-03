@@ -15,6 +15,11 @@
     --warna2: #EC594C;
     /* Replace with your secondary color value */
     --warna3: #343333;
+
+    ::selection {
+        background-color: rgba(244, 76, 50, 0.789);
+        color: #333; /* Change to the desired text color */
+      }
 }
 
 .vh {
