@@ -37,6 +37,11 @@ function toggle(){
   popup.classList.toggle('active');
 }
 
+function logout(){
+  var blur = document.getElementById('blur');
+  blur.classList.toggle('active');
+}
+
 //KOMENTAR SCROLL BUTTON 
 const container = document.querySelector(".conkom2");
 const scrollUpButton = document.getElementById("scroll-up");

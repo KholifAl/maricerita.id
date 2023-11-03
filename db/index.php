@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style1.css">
     <link rel="stylesheet" href="assets/css/style2.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
 
@@ -38,15 +38,33 @@
                 <li><a href="#kami" class="news nav-link">Kami</a></li>
                 <li><a href="#contact" class="contact nav-link">Contact</a></li>
             </ul>
-            <div>
-                <a class="btn-box" href="login/">Login</a>
+
+            <?php
+            session_start();
+            include "koneksi.php";
+            if (isset($_SESSION['loguname'])) {
+                $uname = $_SESSION['loguname'];
+                $sql = "SELECT * FROM user WHERE user_name ='$uname'";
+                $result = mysqli_query($koneksi, $sql);
+                $row = mysqli_fetch_assoc($result);
+            
+            ?> <div class="bt-circle">
+                    <img src="Upload/uploads/<?=$row['profile']?>" alt="Foto Profil">
+                </div>
+                
             </div>
+            
+            
+            <?php } else { ?>
+                <div>
+                <a class="btn-box" href="login/">Login</a>
+            </div> <?php }?>
         </nav>
-        <!-- <div class="hamburger" id="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div> -->
+
+        <div class="dropdown-content">
+                    <a href="#">Logout</a>
+                </div>
+
     </header>
 
     <main>
@@ -83,17 +101,17 @@
     
     <section id="home" class="vh Judul">   
         <div class="container">
-            <div class="kepala">
-                <h1>One Word For Today</h1>
-                <h4>Website ini berisi tentang satu kata untuk hari ini kok yaa</h4>
-            </div>
+        <div class="kepala">
+                    <p>Selamat datang di Website</p>
+                    <h1>/Sra·wung/</h1>
+                    <h4>Tempat untuk Saling Berbagi Cerita</h4>
+                </div>
             <div class="gambar">
                 <img src="assets/img/gambar_utama.png" alt="gambar bagus">
             </div>
         </div>
         <?php
         unset($_SESSION['alert']);
-        session_start();
 
         if (isset($_SESSION['loguname'])) {
         echo "Selamat Datang " . $_SESSION['loguname'] ." !";
@@ -101,7 +119,7 @@
         echo "Anda Belum Login";
         }
         ?>
-        <a href='logout.php' >Logout Akun</a>
+        <a href='logout.php'>Logout Akun</a>
     </section>
     
     <section id="about" class="vh About">
@@ -133,13 +151,14 @@
             </div>
             <div class="ab-text">
                 <h1>Mari Kita Bercerita.</h1>
-                <h3>A Word For Today adalah sebuah website yang berfungsi sebagai wadah untuk saling berbagi kata-kata dari banyak orang. Website ini memiliki dua tipe form, yaitu Quotes dan Mari Cerita.</h3>
+                <h3>Srawung adalah sebuah website yang berfungsi sebagai wadah untuk saling berbagi kata-kata dari banyak orang. Website ini memiliki dua tipe form, yaitu Mari Cerita dan Kata Hari Ini</h3>
                 <ol class="custom-ol">
                     <li>
-                        <h3>Quotes adalah form untuk berbagi kutipan atau kata-kata bijak dari berbagai sumber. Pengguna dapat berbagi kutipan dari buku, film, lagu, atau sumber lainnya.</h3></li>
-                    <li>
                         <h3>Mari Cerita adalah form untuk berbagi cerita atau pengalaman pribadi. Pengguna dapat berbagi cerita tentang kehidupan, pengalaman, atau hal-hal yang mereka sukai.</h3>
-                    </li>
+                    </li>    
+                    <li>
+                        <h3>Kata Hari ini adalah form untuk berbagi Quotes,<keygen>kutipan atau kata-kata bijak dari berbagai sumber. Pengguna dapat berbagi kutipan dari buku, film, lagu, atau sumber lainnya.</h3></li>
+
                 </ol>
             </div>
         </div>
