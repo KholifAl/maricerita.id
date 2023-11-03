@@ -7,14 +7,6 @@
 
 }
 
-h2 {
-    color: #00a2c6;
-}
-
-h3 {
-    color: #00a2c6;
-}
-
 :root {
     --bg: #f5f5f5;
 
@@ -23,6 +15,11 @@ h3 {
     --warna2: #EC594C;
     /* Replace with your secondary color value */
     --warna3: #343333;
+
+    ::selection {
+        background-color: rgba(244, 76, 50, 0.789);
+        color: #333; /* Change to the desired text color */
+      }
 }
 
 .vh {
@@ -109,11 +106,71 @@ h3 {
     fill: #FFF;
 }
 
+.kartu {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    gap: 100px;
+    border-radius: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    border-radius: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-front img {
+    border-radius: 20px;
+}
+
+.flip-card-back {
+    background-color: whitesmoke;
+    color: black;
+    transform: rotateY(180deg);
+    justify-content: center;
+    padding: 60px;
+}
+
 /* ========================================HEADER================================================================ */
 
 html {
     scroll-behavior: smooth;
     scrollbar-width: none;
+    /* max-width: 1000px; */
+
 }
 
 body {
@@ -121,104 +178,135 @@ body {
     font-weight: 600;
     background-color: #08031c;
     overflow-x: hidden;
+    /* overflow: hidden; */
+
 }
 
 main {
     padding: 0px;
-    overflow: auto;
+    /* overflow: auto; */
     background: var(--bg);
     /* background: linear-gradient(to right, #cbbeff 0%, #ffc6d8 100%);
     background-size: 400%;
     animation: gradient 15s ease infinite; */
 }
 
-/* @keyframes gradient {
-    0% {
-      background-position: 0%
-   
-  50%;
-    }
-    50% {
-      background-position: 100%
-   
-  50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  } */
 
-  
+
 
 .logo {
     display: flex;
     height: 50px;
     position: relative;
     color: var(--warna1);
-
+    margin-left: 10px;
 }
 
 .navigation {
     display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
     text-decoration: none;
-    color: white;
-
+    color: rgb(0, 0, 0);
 }
 
-nav a:hover {
-    font-weight: bold;
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 6px;
+    border-radius: 2px;
+    left: 10%;
+    background-color: var(--warna2);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav a.active::after  {
+    transform: scaleX(1);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 nav li {
-    display: inline;
+    /* display: inline; */
     list-style-type: none;
     margin-right: 20px;
 
 }
 
 nav {
+    height: 60px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: sticky;
-    /* display: none; */
-    background-color: red;
+    background-color: rgb(253, 253, 253);
     z-index: 1000;
+    box-shadow: 0 0 6px rgba(24, 24, 24, 0.3);
     /* Add a z-index to ensure the navigation is on top */
-    padding: 5px;
+    padding: 5px 80px;
+    /* padding: 10px; */
     gap: 20px;
+    border-radius: 0 0 20px 20px;
+    /* background-color: red; */
 }
-header {
-    position: fixed;
-    width: 100%;
-    height: 150px;
-    z-index: 100;
-}    
 
 .btnLogin-popup {
     display: inline-block;
+    margin-right: 10px;
+    width: 200px;
     position: relative;
     padding: 10px 20px;
-    background-color: #ff6600;
+    background-color: #ffffff;
     /* Button background color */
-    color: #fff;
+    color: #000000;
     /* Button text color */
     text-decoration: none;
-    border-radius: 5px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btnLogin-popup:hover {
+    background-color: #fc7165;
+    color: white;
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
 
-
+}
 
 footer {
     padding: 20px;
     color: white;
-    background-color: #00a2c6;
+    background:linear-gradient(#EC594C, #fc7165);
     text-align: center;
     font-weight: bold;
 }
@@ -255,20 +343,16 @@ footer {
 /* ==================================================CONTACT========================================================================= */
 #contact {
     justify-content: center;
-    height: 560px;
+    height: 250px;
     width: 100%;
-    padding: 70px 0;
-    padding: auto 100px;
+    padding: 30px 0;
+    padding: auto 30px;
     text-align: center;
     position: relative;
     color: #000000;
 }
 
-@media screen and (max-width: 768px) {
-  
-
-
-}
+@media screen and (max-width: 768px) {}
 
 @media screen and (max-width:1000px) {
 
@@ -283,4 +367,12 @@ footer {
     background-color: var(--warna2);
     margin-top: 60px;
     padding-top: 50px;
+}
+
+#kami h2 {
+    color: #EC594C;
+}
+
+#kami h2:hover {
+    color: white;
 }

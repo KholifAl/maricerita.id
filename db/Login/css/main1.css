@@ -222,6 +222,7 @@ iframe {
 [ Focus ]*/
 
 
+
 .symbol-input100 {
   font-size: 15px;
 
@@ -402,6 +403,19 @@ iframe {
 .alert-validate:hover:before {
   visibility: visible;
   opacity: 1;
+}
+
+.ha {background-color: #7e7e7e;
+  color: #fff;
+
+}
+
+a.ha {
+  color: #e8f0fe;
+}
+
+.ha:hover {
+  background-color: var(--warna3);
 }
 
 @media (max-width: 992px) {

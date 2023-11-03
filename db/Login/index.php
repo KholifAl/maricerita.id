@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="css/select2.min.css">
 
 <link rel="stylesheet" type="text/css" href="css/util.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/main1.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
 
 <meta name="robots" content="noindex, follow">
@@ -48,7 +48,11 @@ Login Akun
     </div>
     <div class="container-login100-form-btn">
     <button type="submit" class="login100-form-btn" value="login" name="login">Login </button>
-  </div>
+    </div>
+    <div>
+      <a type="submit" class="container-login100-form-btn login100-form-btn ha" value="login" name="login">Login </a>
+    </div>
+
 
   <div class="text-center p-t-136">
       <a class="txt2" href="../register/">
