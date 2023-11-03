@@ -1,5 +1,4 @@
 
-
 //1 KATA HARI INI
 
 let swiperCards = new Swiper(".card__content", {
@@ -71,4 +70,11 @@ navLinks.forEach(link => {
         // Add the "active" class to the clicked link
         this.classList.add('active');
     });
+});
+
+const menuIcon = document.getElementById("menu-icon");
+const menuList = document.getElementById("menu-list");
+
+menuIcon.addEventListener("click", () => {
+  menuList.classList.toggle("navigation");
 });
