@@ -31,15 +31,16 @@
     <nav>
             <img class="logo" src="assets/img/logo.png" alt="Satu Kata">
             <ul class="navigation">
-                <li><a href="#home" class="home">Home</a></li>
-                <li><a href="#about" class="about">About</a></li>
-                <li><a href="#komentar" class="about">Cerita</a></li>
-                <li><a href="#kata" class="about">Quotes</a></li>
-                <li><a href="#kami" class="news">Kami</a></li>
-                <li><a href="#contact" class="contact">Contact</a></li>
+                <li><a href="#home" class="home nav-link">Home</a></li>
+                <li><a href="#about" class="about nav-link">About</a></li>
+                <li><a href="#komentar" class="about nav-link">Cerita</a></li>
+                <li><a href="#kata" class="about nav-link">Quotes</a></li>
+                <li><a href="#kami" class="news nav-link">Kami</a></li>
+                <li><a href="#contact" class="contact nav-link">Contact</a></li>
             </ul>
-            <a href="login/" class="btnLogin-popup">Login</a>
-            
+            <div>
+                <a class="btn-box" href="#">Login</a>
+            </div>
         </nav>
         <!-- <div class="hamburger" id="hamburger">
                 <div class="bar"></div>
@@ -293,7 +294,7 @@
 
 
         <section id="kata" class="vh Kata">
-
+        <br><br><br>
             <div>
                 <h1 class="ab-text k">Kata Untuk Hari Ini.</h1>
             </div>
@@ -391,50 +392,39 @@
         </section>
         
         <section id="kami" class="vh Kita">
-
-            
-
-            <h1>Meet Us</h1>
+            <h1 style="font-size: 50px;">About Us</h1>
             <div class="kartu">
-                <div class="front a">
-
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/img/dapa.jpg" alt="Daffa Zacky" style="width: 300px; height: 400px">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Daffa Zacky Primanda</h1>
+                            <p>21301241047</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="back a">
-                    <h1>Nickname</h1>
-                    <h4>Nama Lengkap</h4>
-                    <h4>NIM</h4>
-                    <h4>Kelas</h4>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/img/kolip.jpg" alt="Kholif" style="width:300px; height: 400px">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Kholif Al Hamdhany</h1>
+                            <p>21301244016</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button class="arrow-left"></button>
-            <button class="arrow-right"></button>
-        </div>      
-        <div class="swiper-container">
-            <div class="mySwiper" effect="cards" grab-cursor="true">
-                <div class="swiper-slide">Slide1</div>
-                <div class="swiper-slide">Slide2</div>
-                <!-- <swiper-slide>Slide 1</swiper-slide>
-                <swiper-slide>Slide 2</swiper-slide> -->
-                <!-- <swiper-slide>Slide 3</swiper-slide>
-                <swiper-slide>Slide 4</swiper-slide>
-                <swiper-slide>Slide 5</swiper-slide>
-                <swiper-slide>Slide 6</swiper-slide>
-                <swiper-slide>Slide 7</swiper-slide>
-                <swiper-slide>Slide 8</swiper-slide>
-                <swiper-slide>Slide 9</swiper-slide> -->
-                </div>
-        </div>
-
-    </section>
-
-
-
-        
+            <h2 style="font-size: 30px;">Mathematics Education</h2>
+            <h2 style="font-size: 30px;">Faculty of Math and Sciences</h2>
+            <h2 style="font-size: 30px;">Yogyakarta State University</h2>
+            <br><br>
+        </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ec594c" fill-opacity="1" d="M0,224L10.9,197.3C21.8,171,44,117,65,96C87.3,75,109,85,131,112C152.7,139,175,181,196,202.7C218.2,224,240,224,262,208C283.6,192,305,160,327,128C349.1,96,371,64,393,58.7C414.5,53,436,75,458,101.3C480,128,502,160,524,192C545.5,224,567,256,589,240C610.9,224,633,160,655,144C676.4,128,698,160,720,186.7C741.8,213,764,235,785,208C807.3,181,829,107,851,64C872.7,21,895,11,916,37.3C938.2,64,960,128,982,176C1003.6,224,1025,256,1047,240C1069.1,224,1091,160,1113,128C1134.5,96,1156,96,1178,85.3C1200,75,1222,53,1244,80C1265.5,107,1287,181,1309,208C1330.9,235,1353,213,1375,218.7C1396.4,224,1418,256,1429,272L1440,288L1440,0L1429.1,0C1418.2,0,1396,0,1375,0C1352.7,0,1331,0,1309,0C1287.3,0,1265,0,1244,0C1221.8,0,1200,0,1178,0C1156.4,0,1135,0,1113,0C1090.9,0,1069,0,1047,0C1025.5,0,1004,0,982,0C960,0,938,0,916,0C894.5,0,873,0,851,0C829.1,0,807,0,785,0C763.6,0,742,0,720,0C698.2,0,676,0,655,0C632.7,0,611,0,589,0C567.3,0,545,0,524,0C501.8,0,480,0,458,0C436.4,0,415,0,393,0C370.9,0,349,0,327,0C305.5,0,284,0,262,0C240,0,218,0,196,0C174.5,0,153,0,131,0C109.1,0,87,0,65,0C43.6,0,22,0,11,0L0,0Z"></path></svg>
         <section id="contact" class="vh Mail">
-
-
-
-            <h1>Hubungi Kami</h1>
+            <h1 style="font-size: 50px;">Hubungi Kami</h1>
             <div class="sosmed">
                 <a class="bundar ig"><i class='bx bxl-instagram'></i></a>
                 <a class="bundar fb"><i class='bx bxl-facebook'></i></a>
@@ -447,14 +437,10 @@
                 <a class="bundar yt"><i class='bx bxl-youtube'></i></a>
             </div>
         </section>
-
-
-
-
     </main>
-
+    
     <footer>
-        <p>Belajar Dasar Pemrograman Web &#169; 2019, Tugas UTS PDW</p>
+        <p>Masih Pemula Puh &#169; 2023, Project UTS PDW</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
