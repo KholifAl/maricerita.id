@@ -31,6 +31,10 @@ body {
   weight: 100vw;
 }
 
+a.btna {
+  text-decoration: none;
+}
+
 .signup-container {
   display: grid;
   grid-template-areas: "left right";
@@ -162,7 +166,7 @@ body {
   display: grid;
   padding: 10px 40px 12px;
 }
-.right-container footer button {
+.btna,.right-container footer button {
 
   width: 100px;
   height: 38px;
@@ -181,11 +185,15 @@ body {
   box-shadow: 0 0 6px rgba(24, 24, 24, 0.3);
   transition: .5s;
 }
-.right-container footer #back {
+
+
+.btna {
+  font-weight: 600;
   background: #db967e;
   transition: 0.2s all ease-in-out;
+  text-decoration: none !important;
 }
-.right-container footer #back:hover {
+.btna:hover {
   background: var(--warna2);
   color: #fff;
 }

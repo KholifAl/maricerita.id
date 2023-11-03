@@ -53,9 +53,9 @@
         <div class="bgcon" id="blur" ></div>
         <div class="col-kom2" id="popup" >
             <h1 class="ab-text">Kata Untuk Hari Ini</h1>
-            <form action="textarea.php" method="post">
+            <form action="kat.php" method="post">
                 <div class="col-area2">
-                    <textarea style="width: 450px" class="custom-area" name="komentar" placeholder="Tulis Quotes..." maxlength="40"></textarea>
+                    <textarea style="width: 450px" class="custom-area" name="kata" placeholder="Tulis Quotes..." maxlength="40"></textarea>
                 </div>
                 <div class="foot">
                     <div class="bt-sub" onclick="toggle()" >Kembali</div>
@@ -100,8 +100,7 @@
         echo "Anda Belum Login";
         }
         ?>
-            <a href='logout.php' >Logout Akun</a>
-
+        <a href='logout.php' >Logout Akun</a>
     </section>
     
     <section id="about" class="vh About">

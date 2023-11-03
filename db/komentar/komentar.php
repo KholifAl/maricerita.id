@@ -1,61 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Buat Cerita</title>
-</head>
-<body>
-    
+<?php
 
-<div class='signup-container'>
-  <div class='left-container'>
-    <h1>
-      Srawung
-    </h1>
-    <h4>
-      Mulai Ceritamu!
-    </h4>
-    <div class='puppy'>
-      <!-- <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-542207-jpeg.png'> -->
-    </div>
-  </div>
-  <div class='right-container'>
-    <header>
-      <h1>Halo \\NAMA\\ , </h1>
-      <h2 class="t" >Silahkan Tuliskan Ceritamu! </h2>
-      <br>
-        <div class='col-area'>
-          <textarea class='custom-area' placeholder="Mulai Kisahmu.." type='text'></textarea>
-        </div>
-    <form action="#" method="post">
-    <div class='set'>
-        <div class='pets-gender'>
-          <div class='radio-container'>
-                <input class="q" checked='' id='=female' name='alias' type='radio' value='female'>
-            <label class="q" for='=female'>/NAMA/</label>
-                <input class="w" id='=male' name='alias' type='radio' value='male'>
-            <label class="w" for='=male'>Anonim</label>
-          </div>
-        </div>
-
-      </div>
-      
-    </header>
-    <footer>
-      <div class='set'>
+include "../koneksi.php";
+session_start();
+$message = '';
+// Memeriksa apakah formulir telah dikirim
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['alias'])) {
         
-        <button id='back'>Kembali</button>
-        <button type="submit" id='next'>Kirim</button>
-      </div>
-    </footer>
-    </form>
-      
+        $nama = $_SESSION['loguname'];
+        $komentar = $_POST["komen"];
+        $anon = "Anonim";
 
-  </div>
-</div>
+        if ($_POST['alias'] === "anonim") {
+            $sql = "INSERT INTO komentar (nama, komentar, created_at, updated_at) VALUES ('$anon', '$komentar', NOW(), NOW())";
+        }
+
+        else {
+            $sql = "INSERT INTO komentar (nama, komentar, created_at, updated_at) VALUES ('$nama', '$komentar', NOW(), NOW())";
+        };
+
+        if (mysqli_query($koneksi, $sql)) {
+            unset($_SESSION['komentar']);
+            header('Location: kom-berh.php');
+        } else {
+            echo "Terjadi kesalahan: " . mysqli_error($koneksi);
+        }
+    
+        // if (empty($komentar)) {
+        //     header("Location:index.php");
+        // }
+    
+        // else {
+        //     $sql = "INSERT INTO komentar (nama, komentar, created_at, updated_at) VALUES ('$nama', '$komentar', NOW(), NOW())";
+        //     if (mysqli_query($koneksi, $sql)) {
+        //         echo "Data telah disimpan. <a href='index.php'>Lihat Data</a>";
+        //     } else {
+        //         echo "Terjadi kesalahan: " . mysqli_error($koneksi);
+        //     }}
+
+    }
+        else {
+            echo "Data Tidak Benar";
+        }           
+
+}
+    
+   
+else {
+    echo "Form Belum di Submit";
+}
 
 
-</body>
-</html>
+?>
