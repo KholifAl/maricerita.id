@@ -28,7 +28,25 @@
   </head>
         <script type="text/javascript" async="" src="/www.google-analytics.com/analytics.js" nonce="b1f58057-af27-4c75-832c-ed117fef2366"></script><script defer="" referrerpolicy="origin" src="/cdn-cgi/zaraz/s.js?z=jtdcjtiyzxhly3v0zwqlmjilm0elnuilnuqlmkmlmjj0jtiyjtnbjtiytg9naw4lmjbwmsuymiuyqyuymnglmjilm0ewljawnzu4mza1mdi1mzg2mduyncuyqyuymnclmjilm0exntm2jtjdjtiyacuymiuzqtg2ncuyqyuymmolmjilm0e3mdclmkmlmjjljtiyjtnbmtuzniuyqyuymmwlmjilm0elmjjodhrwcyuzqsuyriuyrmnvbg9ybglilmnvbsuyrmv0yyuyrmxmjtjgtg9naw5fdjelmkzpbmrlec5odg1sjtiyjtjdjtiyciuymiuzqsuymiuymiuyqyuymmslmjilm0eyncuyqyuymm4lmjilm0elmjjvveytocuymiuyqyuymm8lmjilm0etndiwjtjdjtiycsuymiuzqsu1qiu3qiuymm0lmjilm0elmjjzzxqlmjilmkmlmjjhjtiyjtnbjtvcjtiymcuymiuyqyuymmnvbmzpzyuymiuyqyu3qiuymnnjb3bljtiyjtnbjtiycgfnzsuymiu3rcu1rcu3rcuyqyu3qiuymm0lmjilm0elmjjzzxqlmjilmkmlmjjhjtiyjtnbjtvcjtiymsuymiuyqyuymlvbltizntgxnty4ltezjtiyjtjdjtdcjtiyc2nvcgulmjilm0elmjjwywdljtiyjtdejtvejtdejtvejtde"></script><script nonce="b1f58057-af27-4c75-832c-ed117fef2366">(function(w,d){!function(bb,bc,bd,be){bb[bd]=bb[bd]||{};bb[bd].executed=[];bb.zaraz={deferred:[],listeners:[]};bb.zaraz.q=[];bb.zaraz._f=function(bf){return async function(){var bg=Array.prototype.slice.call(arguments);bb.zaraz.q.push({m:bf,a:bg})}};for(const bh of["track","set","debug"])bb.zaraz[bh]=bb.zaraz._f(bh);bb.zaraz.init=()=>{var bi=bc.getElementsByTagName(be)[0],bj=bc.createElement(be),bk=bc.getElementsByTagName("title")[0];bk&&(bb[bd].t=bc.getElementsByTagName("title")[0].text);bb[bd].x=Math.random();bb[bd].w=bb.screen.width;bb[bd].h=bb.screen.height;bb[bd].j=bb.innerHeight;bb[bd].e=bb.innerWidth;bb[bd].l=bb.location.href;bb[bd].r=bc.referrer;bb[bd].k=bb.screen.colorDepth;bb[bd].n=bc.characterSet;bb[bd].o=(new Date).getTimezoneOffset();if(bb.dataLayer)for(const bo of Object.entries(Object.entries(dataLayer).reduce(((bp,bq)=>({...bp[1],...bq[1]})),{})))zaraz.set(bo[0],bo[1],{scope:"page"});bb[bd].q=[];for(;bb.zaraz.q.length;){const br=bb.zaraz.q.shift();bb[bd].q.push(br)}bj.defer=!0;for(const bs of[localStorage,sessionStorage])Object.keys(bs||{}).filter((bu=>bu.startsWith("_zaraz_"))).forEach((bt=>{try{bb[bd]["z_"+bt.slice(7)]=JSON.parse(bs.getItem(bt))}catch{bb[bd]["z_"+bt.slice(7)]=bs.getItem(bt)}}));bj.referrerPolicy="origin";bj.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(bb[bd])));bi.parentNode.insertBefore(bj,bi)};["complete","interactive"].includes(bc.readyState)?zaraz.init():bb.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script>
 
-    
+
+  <?php
+  session_start();
+
+  // Check if the form on this page has been submitted
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+      // Store form data in session variables
+      $_SESSION['name'] = $_POST['uname'];
+      $_SESSION['email'] = $_POST['email'];
+      $_SESSION['pass'] = $_POST['pass'];
+
+
+      // Redirect to the second page
+      header('Location: index-img.php');
+      exit;
+  }
+  ?>
+
+
   <body>
     <div class="limiter">
         <div class="container-login100">
@@ -36,7 +54,7 @@
             <div class="login100-pic js-tilt" data-tilt>
               <img src="Sponsor 2.png" alt="IMG">
             </div>
-                <form class="login100-form validate-form">
+                <form class="login100-form validate-form" method="POST" action="index.php">
                   <span class="login100-form-title">
                     Register Akun
                   </span>
@@ -81,7 +99,7 @@
                   </div>
 
                   <div class="text-center p-t-106">
-                  <a class="txt2" href="../Login/login.php">
+                  <a class="txt2" href="../login/">
                   Sudah Punya Akun?
                     <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                   </a>

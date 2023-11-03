@@ -29,20 +29,13 @@ let swiperCards = new Swiper(".card__content", {
 
 
 
-// KOMENTAR
-
-// const container = document.querySelector('.container_kom');
-
-// container.addEventListener('scroll', (event) => {
-//   // Get the current scroll position
-//   const scrollTop = container.scrollTop;
-
-//   // If the scroll position is at the bottom of the container, scroll to the next post
-//   if (scrollTop === container.scrollHeight - container.clientHeight) {
-//     const nextPost = container.querySelector('.post:not(.active)');
-//     nextPost.classList.add('active');
-//   }
-// });
+// FLOAATING LIST
+function toggle(){
+  var blur = document.getElementById('blur');
+  blur.classList.toggle('active');
+  var popup = document.getElementById('popup');
+  popup.classList.toggle('active');
+}
 
 //KOMENTAR SCROLL BUTTON 
 const container = document.querySelector(".conkom2");
