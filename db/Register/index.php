@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (isset($_SESSION["loguname"])) {
+    header("location: ../");
+    }
+
+?>
+
 <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -30,7 +38,6 @@
 
 
   <?php
-  session_start();
 
   // Check if the form on this page has been submitted
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {

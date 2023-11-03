@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (isset($_SESSION["loguname"])) {
+    header("location: ../");
+    }
+
+?>
+
 <html lang="en"><head>
 <title>Login V1</title>
 <meta charset="UTF-8">
@@ -48,9 +56,9 @@ Login Akun
     </div>
     <div class="container-login100-form-btn">
     <button type="submit" class="login100-form-btn" value="login" name="login">Login </button>
-    </div>
-    <div>
-      <a type="submit" class="container-login100-form-btn login100-form-btn ha" value="login" name="login">Login </a>
+    </div><br>
+    <div class="nn">
+      <a href="../" type="submit" class="container-login100-form-btn login100-form-btn ha" >Kembali</a>
     </div>
 
 

@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (isset($_SESSION["loguname"])) {
+    header("location: ../login");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

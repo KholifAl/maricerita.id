@@ -414,6 +414,14 @@ a.ha {
   color: #e8f0fe;
 }
 
+.nn {
+  color: #e8f0fe;
+}
+
+.nn a {
+  cursor: pointer;
+}
+
 .ha:hover {
   background-color: var(--warna3);
 }
