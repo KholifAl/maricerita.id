@@ -280,7 +280,6 @@ nav {
     font-size: large;
     font-weight: bold;
     border-radius: 10px;
-    moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -290,7 +289,6 @@ nav {
     background-color: #fc7165;
     color: white;
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
